@@ -1,4 +1,4 @@
-angular.module('abkj.registery.factory')
+angular.module('abkj.registery.factory', [])
 .factory('abkjRegisteryFactory', abkjRegistery);
 
 function abkjRegistery() {

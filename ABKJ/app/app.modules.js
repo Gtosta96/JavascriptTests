@@ -8,7 +8,6 @@ function loadModules() {
 		//Application directives (shared)
 		'abkj.navbar.directive',
 		'abkj.ListClass.directive',
-		'abkj.compare.directive',
-		'abkj.registery.factory'
+		'abkj.compare.directive'
 	];
 };
