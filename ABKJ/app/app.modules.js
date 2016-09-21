@@ -7,6 +7,7 @@ function loadModules() {
 
 		//Application directives (shared)
 		'abkj.navbar.directive',
-		'abkj.ListClass.directive'
+		'abkj.ListClass.directive',
+		'abkj.compare.directive'
 	];
 };
