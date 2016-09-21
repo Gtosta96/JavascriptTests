@@ -13,10 +13,14 @@ function abkjFieldComparator() {
 		controller: abkjFieldComparatorCtrl,
 	};
 
-	//abjkFieldComparatorCtrl.$inject('abkjRegisteryFactory');
-	function abkjFieldComparatorCtrl(registeryFactory) {
+	function abkjFieldComparatorCtrl() {
 		var vm = this;
-		vm = registeryFactory;
+		vm.models = [];
+		vm.register = register;
+
+		function register(el) {
+			vm.models = el;
+		};
 	};
 };
 
