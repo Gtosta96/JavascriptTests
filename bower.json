@@ -18,7 +18,8 @@
     "karma": "^0.4.6",
     "jasmine-core": "^2.5.2",
     "karma-jasmine": "^1.0.2",
-    "karma-chrome-launcher": "^2.0.0"
+    "karma-chrome-launcher": "^2.0.0",
+    "angular-mocks": "^1.5.8"
   },
   "dependencies": {
     "angular": "^1.5.8",

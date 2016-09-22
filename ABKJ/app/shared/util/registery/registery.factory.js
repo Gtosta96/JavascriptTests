@@ -16,6 +16,10 @@ function abkjRegistery() {
 	};
 
 	function get(key) {
-		return deposit[key];
-	}
+		return (key ? deposit[key] : deposit);
+	};
+
+	function destroy(key) {
+		key ? delete deposit[key] : (deposit = {});
+	};
 };

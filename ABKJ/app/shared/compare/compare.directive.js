@@ -5,9 +5,10 @@
 */
 angular.module('abkj.compare.directive', [])
 .directive('abkjFieldComparator', abkjFieldComparator)
-.directive('abkjCompare', abkjCompare);
+.directive('abkjCompare', abkjCompare)
 
-function abkjFieldComparator() {
+abkjFieldComparator.$inject = ['abkjRegisteryFactory'];
+function abkjFieldComparator(registeryFactory) {
 	return {
 		restrict: 'A',
 		controller: abkjFieldComparatorCtrl,
@@ -15,14 +16,10 @@ function abkjFieldComparator() {
 
 	function abkjFieldComparatorCtrl() {
 		var vm = this;
-		vm.models = [];
-		vm.register = register;
-
-		function register(el) {
-			vm.models = el;
-		};
+		angular.merge(vm, registeryFactory);
 	};
 };
+
 
 function abkjCompare() {
 	return {
@@ -33,7 +30,7 @@ function abkjCompare() {
 		},
 		link: function(scope, element, attributes, abkjFieldComparatorCtrl) {
 			abkjFieldComparatorCtrl.register(element[0]);
-			console.log(arguments);
+
 		}
 	}
 };
