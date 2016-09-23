@@ -1,7 +1,7 @@
 angular.module('abkj.registery.factory', [])
-.factory('abkjRegisteryFactory', abkjRegistery);
+.factory('RegisteryFactory', RegisteryFactory);
 
-function abkjRegistery() {
+function RegisteryFactory() {
 	var deposit = {};
 
 	return {
