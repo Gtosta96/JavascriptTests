@@ -10,14 +10,14 @@ describe('Test: Testing Registery Factory', function() {
     }));
 
 
-    it('Should contain all factory functions', function() {
+    it('Should contain all factory functions defined', function() {
 
         var test = [];
         var keys = Object.keys(RegisteryFactory);
         keys.forEach(function(attribute) {
             test.push(RegisteryFactory[attribute]);
         });
-        var expectation = new Array(test.length).fill(undefined);
+        var expectation = new Array(test.length); //[undefined x 4]; .fill(undefined);
 
         expect(test).not.toBe(expectation);
     });

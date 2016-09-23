@@ -5,7 +5,7 @@
 */
 angular.module('abkj.compare.directive', [])
 .directive('abkjFieldComparator', abkjFieldComparator)
-.directive('abkjCompare', abkjCompare)
+.directive('abkjCompare', abkjCompare);
 
 abkjFieldComparator.$inject = ['abkjRegisteryFactory'];
 function abkjFieldComparator(registeryFactory) {
@@ -32,5 +32,5 @@ function abkjCompare() {
 			abkjFieldComparatorCtrl.register(element[0]);
 
 		}
-	}
+	};
 };

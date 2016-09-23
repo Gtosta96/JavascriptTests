@@ -8,7 +8,7 @@ function RegisteryFactory() {
 		register: register,
 		get: get,
 		destroy: destroy
-	}
+	};
 
 	function register(el) {
 		var key = el.id || el.name;
@@ -20,6 +20,9 @@ function RegisteryFactory() {
 	};
 
 	function destroy(key) {
-		key ? delete deposit[key] : (deposit = {});
+		if(key)
+			delete deposit[key];
+		else
+			deposit = {};
 	};
 };
